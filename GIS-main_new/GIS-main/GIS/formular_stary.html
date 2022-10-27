@@ -1,0 +1,390 @@
+<?php
+session_start();
+require 'connection.php';
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Formulár</title>
+    <link rel="stylesheet" type="text/css" href="formular_stary.css">
+</head>
+<body>
+    <nav>
+    <ul>
+    <li><a href="uvodnaStranka.html" class="hover">Domov</a></li>
+    <li><a href="kategoria.html" class="hover">Kategória</a></li>
+    <li><a href="pridanieOtazky.html" class="hover">Pridanie otázky</a></li>
+    <li><a href="formular_stary.html" class="active">Vyplnenie formuláru</a></li>
+    <li><a href="adminPrihlasenie.html" class="hover">Admin Prihlásenie</a></li>
+    </ul>
+</nav>
+    <div class="heading">
+    <h1 id="head">Formulár pre firmy</h1>
+    <h2 id="subheading">Ďakujeme za váš čas</h2>
+</div>
+
+<li >
+    <a href="adminPrihlasenie.php">
+        <span  class="lins_name">Admin Prihlasenie</span>
+    </a>
+</li>
+<li >
+    <a href="kategoria.php">
+        <span  class="lins_name">Kategoria</span>
+    </a>
+</li>
+<li >
+    <a href="vybratieKategorieNaVlozenieOtazky.php">
+        <span  class="lins_name">Pridanie otazky</span>
+    </a>
+</li>
+<li >
+    <a href="vybratieFormularu.php">
+        <span  class="lins_name">Vyplnenie formularu</span>
+    </a>
+</li>
+
+<form id="firmaForm" action="firmaForm.php" method="post" name="firmaForm">
+    <div id="content1">
+        <label><b>Názov firmy </b>(nepovinný údaj)</label><br><br>
+        <input type="text" name="nazov" id="nazov" required placeholder="Zadaj názov firmy" class="box" ><br><br>
+        <label><b>Lokalita</b></label><br><br>
+    </div>
+
+    <input list="lokalita" name="lokalita" required placeholder="Okres" class="box" >
+    <datalist id="lokalita">
+        <option value="Bratislava I">
+        <option value="Bratislava II">
+        <option value="Bratislava III">
+        <option value="Bratislava IV">
+        <option value="Bratislava V">
+        <option value="Malacky">
+        <option value="Pezinok">
+        <option value="Senec">
+        <option value="Trenčín">
+        <option value="Bánovce nad Bebravou">
+        <option value="Ilava">
+        <option value="Myjava">
+        <option value="Nové Mesto nad Váhom">
+        <option value="Partizánske">
+        <option value="Považská Bystrica">
+        <option value="Prievidza">
+        <option value="Púchov">
+        <option value="Nitra">
+        <option value="Komárno">
+        <option value="Levice">
+        <option value="Nové Zámky">
+        <option value="Šaľa">
+        <option value="Topoľčany">
+        <option value="Zlaté Moravce">
+        <option value="Trnava">
+        <option value="Dunajská Streda">
+        <option value="Galanta">
+        <option value="Hlohovec">
+        <option value="Piešťany">
+        <option value="Senica">
+        <option value="Skalica">
+        <option value="Košice I">
+        <option value="Košice II">
+        <option value="Košice III">
+        <option value="Košice IV">
+        <option value="Košice okolie">
+        <option value="Gelnica">
+        <option value="Michalovce">
+        <option value="Rožňava">
+        <option value="Sobrance">
+        <option value="Spišská Nová Ves">
+        <option value="Trebišov">
+        <option value="Prešov">
+        <option value="Bardejov">
+        <option value="Humenné">
+        <option value="Kežmarok">
+        <option value="Levoča">
+        <option value="Medzilaborce">
+        <option value="Poprad">
+        <option value="Sabinov">
+        <option value="Snina">
+        <option value="Stará Ľubovňa">
+        <option value="Stropkov">
+        <option value="Svidník">
+        <option value="Vranov nad Topľou">
+        <option value="Banská Bystrica">
+        <option value="Banská Štiavnica">
+        <option value="Brezno">
+        <option value="Lučenec">
+        <option value="Detva">
+        <option value="Krupina">
+        <option value="Poltár">
+        <option value="Revúca">
+        <option value="Rimavská Sobota">
+        <option value="Veľký Krtíš">
+        <option value="Zvolen">
+        <option value="Žarnovica">
+        <option value="Žiar nad Hronom">
+        <option value="Žilina">
+        <option value="Bytča">
+        <option value="Čadča">
+        <option value="Dolný Kubín">
+        <option value="Kysucké Nové Mesto">
+        <option value="Liptovský Mikuláš">
+        <option value="Martin">
+        <option value="Námestovo">
+        <option value="Ružomberok">
+        <option value="Turčianske Teplice">
+    </datalist><br><br>
+
+    <div id="content2">
+        <label><b>Zameranie</b></label><br><br>
+    </div>
+
+    <input list="zameranie" name="zameranie"placeholder="Vyber zameranie" class="box"><br><br>
+    <datalist id="zameranie">
+        <option value="Automobilový priemysel">Automobilový priemysel</option>
+        <option value="Baníctvo">Baníctvo</option>
+        <option value="Energetika">Energetika</option>
+        <option value="Filmový priemysel">Filmový priemysel</option>
+        <option value="Gurmánsky priemysel">Gurmánsky priemysel</option>
+        <option value="Hospodárenie s odpadom">Hospodárenie s odpadom</option>
+        <option value="Hračkársky priemysel">Hračkársky priemysel</option>
+        <option value="Hudobný priemysel">Hudobný priemysel</option>
+        <option value="Hutníctvo">Hutníctvo</option>
+        <option value="Chemický priemysel">Chemický priemysel</option>
+        <option value="Lodiarstvo">Lodiarstvo</option>
+        <option value="Polygrafia">Polygrafia</option>
+        <option value="Potravinárstvo">Potravinárstvo</option>
+        <option value="Spracovanie dreva">Spracovanie dreva</option>
+        <option value="Textilníctvo">Textilníctvo</option>
+        <option value="Priemyselné odvetvie">Priemyselné odvetvie</option>
+        <option value="Keramikárstvo">Keramikárstvo</option>
+        <option value="Nábytkárstvo">Nábytkárstvo</option>
+        <option value="Stavebníctvo">Stavebníctvo</option>
+        <option value="Zlievarenstvo">Zlievarenstvo</option>
+    </datalist>
+
+    <div><label><b>Spotreba energie na pokrytie vykúrenia priestorov</b></label></div>
+    <br>
+    <input list="spotrebaPriestor" name="spotrebaPriestor"placeholder="Typ energie" class="box"><br><br>
+    <datalist id="spotrebaPriestor">
+        <option value="Plyn">Plyn</option>
+        <option value="Elektrina">Elektrina</option>
+        <option value="Fotovoltaika">Fotovoltaika</option>
+        <option value="Solárne panely">Solárne panely</option>
+    </datalist>
+
+    <input type="text" id="spotrebaIntPriestor" name="spotrebaIntPriestor" required placeholder="Zadajte percentualnu spotrebu energie"><br><br>
+
+    <div><label><b>Spotreba energie na výrobu</b></label></div>
+    <br>
+    <input list="spotrebaVyroba" name="spotrebaVyroba"placeholder="Typ energie" class="box"><br><br>
+    <datalist id="spotrebaVyroba">
+        <option value="Plyn">Plyn</option>
+        <option value="Elektrina">Elektrina</option>
+        <option value="Fotovoltaika">Fotovoltaika</option>
+        <option value="Solárne panely">Solárne panely</option>
+    </datalist>
+    <input type="text" name="spotrebaIntVyroba" id="spotrebaIntVyroba" required placeholder="Zadajte percentualnu spotrebu energie" class="box" ><br><br>
+    <label><b>Percentuálne ušetrenie pri využívaní alternatívnych zdrojoch *</b></label><br><br>
+    <input type="text" id="percentualneUsetrenie" name="percentualneUsetrenie" placeholder="Napr. 15%" class="box"><br><br>
+    <button type="submit" class="firma_btn" id="firmaButton" name="firmaButton">Odoslať</button>
+</form><br><br>
+
+<div class="heading">
+    <h1 id="head">Formulár pre domácnosti</h1>
+    <h2 id="subheading">Ďakujeme za váš čas</h2>
+</div>
+<form id="domacnostForm" action="domacnostForm.php" method="post" name="domacnostFrom">
+    <div id="content1">
+        <label><b>Lokalita</b></label><br><br>
+    </div>
+
+    <input list="lokalita" name="lokalita" required placeholder="Okres">
+    <datalist id="lokalita">
+        <option value="Bratislava I">
+        <option value="Bratislava II">
+        <option value="Bratislava III">
+        <option value="Bratislava IV">
+        <option value="Bratislava V">
+        <option value="Malacky">
+        <option value="Pezinok">
+        <option value="Senec">
+        <option value="Trenčín">
+        <option value="Bánovce nad Bebravou">
+        <option value="Ilava">
+        <option value="Myjava">
+        <option value="Nové Mesto nad Váhom">
+        <option value="Partizánske">
+        <option value="Považská Bystrica">
+        <option value="Prievidza">
+        <option value="Púchov">
+        <option value="Nitra">
+        <option value="Komárno">
+        <option value="Levice">
+        <option value="Nové Zámky">
+        <option value="Šaľa">
+        <option value="Topoľčany">
+        <option value="Zlaté Moravce">
+        <option value="Trnava">
+        <option value="Dunajská Streda">
+        <option value="Galanta">
+        <option value="Hlohovec">
+        <option value="Piešťany">
+        <option value="Senica">
+        <option value="Skalica">
+        <option value="Košice I">
+        <option value="Košice II">
+        <option value="Košice III">
+        <option value="Košice IV">
+        <option value="Košice okolie">
+        <option value="Gelnica">
+        <option value="Michalovce">
+        <option value="Rožňava">
+        <option value="Sobrance">
+        <option value="Spišská Nová Ves">
+        <option value="Trebišov">
+        <option value="Prešov">
+        <option value="Bardejov">
+        <option value="Humenné">
+        <option value="Kežmarok">
+        <option value="Levoča">
+        <option value="Medzilaborce">
+        <option value="Poprad">
+        <option value="Sabinov">
+        <option value="Snina">
+        <option value="Stará Ľubovňa">
+        <option value="Stropkov">
+        <option value="Svidník">
+        <option value="Vranov nad Topľou">
+        <option value="Banská Bystrica">
+        <option value="Banská Štiavnica">
+        <option value="Brezno">
+        <option value="Lučenec">
+        <option value="Detva">
+        <option value="Krupina">
+        <option value="Poltár">
+        <option value="Revúca">
+        <option value="Rimavská Sobota">
+        <option value="Veľký Krtíš">
+        <option value="Zvolen">
+        <option value="Žarnovica">
+        <option value="Žiar nad Hronom">
+        <option value="Žilina">
+        <option value="Bytča">
+        <option value="Čadča">
+        <option value="Dolný Kubín">
+        <option value="Kysucké Nové Mesto">
+        <option value="Liptovský Mikuláš">
+        <option value="Martin">
+        <option value="Námestovo">
+        <option value="Ružomberok">
+        <option value="Turčianske Teplice">
+    </datalist><br><br>
+
+    <div id="content2">
+        <label><b>Typ domácnosti</b></label><br><br>
+    </div>
+
+    <input list="typDomacnosti" name="typDomacnosti" placeholder="Vyber Typ"><br><br>
+    <datalist id="typDomacnosti">
+        <option value="Rodinný dom">Rodinný dom</option>
+        <option value="Byt">Byt</option>
+        <option value="Chata">Chata</option>
+        <option value="Houseboat">Houseboat</option>
+        <option value="Karavan">Karavan</option>
+    </datalist>
+
+    <div id="content1">
+        <label><b>Počet ľudí v domácnosti </b></label><br><br>
+        <input type="text" name="pocetDomacnost" id="pocetDomacnost" required placeholder="Zadajte počet ľudí v domácnosti" class="box" ><br><br>
+    </div>
+
+    <div id="content1">
+        <label><b>Vekový priemer v domácnosti</b></label><br><br>
+        <input type="text" name="vekPriemer" id="vekPriemer" required placeholder="Zadajte vekový priemer v domácnosti" class="box" ><br><br>
+    </div>
+
+    <div><label><b>Najvyšie dosiahnuté vzdelanie v domácnosti</b></label></div>
+    <br>
+    <input list="vzdelanie" name="vzdelanie"placeholder="Vzdelanie" class="box"><br><br>
+    <datalist id="vzdelanie">
+        <option value="Neukončená základná škola">Neukončená základná škola</option>
+        <option value="Ukončená základná škola">Ukončená základná škola</option>
+        <option value="Základné vzdelanie + zaučenie, odborná príprava,kurz">Základné vzdelanie + zaučenie, odborná príprava,kurz</option>
+        <option value="Vyučený/á s výučným listom alebo osvedčením (bez maturity)">Vyučený/á s výučným listom alebo osvedčením (bez maturity)</option>
+        <option value="Odborná škola alebo hospodárska škola (bez maturity)">Odborná škola alebo hospodárska škola (bez maturity)</option>
+        <option value="Vyučený/á s maturitou">Vyučený/á s maturitou</option>
+        <option value="Uplné stredoškolské odborné s maturitou">Uplné stredoškolské odborné s maturitou</option>
+        <option value="Uplné stredoškolské všeobecné (gymnázium, SVŠ)">Uplné stredoškolské všeobecné (gymnázium, SVŠ)</option>
+        <option value="Nadstavbové, pomaturitné štúdium">Nadstavbové, pomaturitné štúdium</option>
+        <option value="Vysoká škola - bakalárske štúdium">Vysoká škola - bakalárske štúdium</option>
+        <option value="Vysoká škola - magisterské, inžinierske štúdium">Vysoká škola - magisterské, inžinierske štúdium</option>
+        <option value="Postgraduálne štúdium (tituly CSc., PhD., Doc., atď.)">Postgraduálne štúdium (tituly CSc., PhD., Doc., atď.)</option>
+    </datalist>
+
+    <div><label><b>Spotreba energie domácnosti</b></label></div>
+    <br>
+    <input list="spotrebaTyp" name="spotrebaTyp" placeholder="Typ energie" class="box"><br><br>
+    <datalist id="spotrebaTyp">
+        <option value="Plyn">Plyn</option>
+        <option value="Elektrina">Elektrina</option>
+        <option value="Fotovoltaika">Fotovoltaika</option>
+        <option value="Solárne panely">Solárne panely</option>
+        <option value="Drevo">Drevo</option>
+        <option value="Bio">Bio</option>
+        <option value="Centrála">Centrála</option>
+    </datalist>
+
+    <label><b>Priemerné mesačné náklady domácnosti</b></label><br><br>
+    <input type="text" name="mesacneNaklady" id="mesacneNaklady" placeholder="Napr. 150" class="box"><br><br>
+
+    <div><label><b>Plánované alternatívne zdroje energii</b></label></div>
+    <br>
+    <input list="alternativaTyp" name="alternativaTyp"placeholder="Typ energie" class="box"><br><br>
+    <datalist id="alternativaTyp">
+        <option value="Plyn">Plyn</option>
+        <option value="Elektrina">Elektrina</option>
+        <option value="Fotovoltaika">Fotovoltaika</option>
+        <option value="Solárne panely">Solárne panely</option>
+        <option value="Drevo">Drevo</option>
+        <option value="Bio">Bio</option>
+        <option value="Centrála">Centrála</option>
+    </datalist>
+
+    <label><b>Percentuálne ušetrenie pri využívaní alternatívnych zdrojoch</b></label><br><br>
+    <input type="text" name="percentualneUsetrenie" id="percentualneUsetrenie" placeholder="Napr. 15%" class="box"><br><br>
+
+    <label><b>Ako dlho rozmýšlate o alternatívach</b>(v mesiacoch)</label><br><br>
+    <input type="text" name="dobaRozmyslania" id="dobaRozmyslania" placeholder="Napr. 15" class="box"><br><br>
+
+    <div><label><b>Používate úsporné veci?</b></label></div>
+    <br>
+    <input list="usporneVeci" name="usporneVeci" placeholder="Uspora" class="box"><br><br>
+    <datalist id="usporneVeci">
+        <option value="Ano">Ano</option>
+        <option value="Nie">Nie</option>
+        <option value="Neviem">Neviem</option>
+    </datalist>
+
+    <div><label><b>Prihliadate na spotrebu pri výbere spotrebičov?</b></label></div>
+    <br>
+    <input list="prihliadanieNaSpotrebu" name="prihliadanieNaSpotrebu"placeholder="Spotrebic" class="box"><br><br>
+    <datalist id="prihliadanieNaSpotrebu">
+        <option value="Ano">Ano</option>
+        <option value="Nie">Nie</option>
+        <option value="Neviem">Neviem</option>
+    </datalist>
+
+    <div><label><b>Vlastnite vysoko energické stroje?</b></label></div>
+    <br>
+    <input list="vysokoEnergickeStroje" name="vysokoEnergickeStroje" placeholder="Stroje" class="box"><br><br>
+    <datalist id="vysokoEnergickeStroje">
+        <option value="Ano">Ano</option>
+        <option value="Nie">Nie</option>
+        <option value="Neviem">Neviem</option>
+    </datalist>
+
+    <button type="submit"  class="domacnost_btn" id="domacnostButton" name="domacnostButton">Odoslať</button>
+</form>
+</body>
+</html>

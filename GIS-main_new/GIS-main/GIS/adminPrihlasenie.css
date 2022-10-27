@@ -1,0 +1,98 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+body{
+	background: url(lake.jpg);	
+}
+nav{
+	height: 80px;
+	width: 100%;
+}
+nav ul{
+	text-align: center;
+}
+
+nav ul li{
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
+}
+
+nav ul li a{
+	font-family: sans-serif;
+	color: #4d3319;
+	font-size: 17px;
+	padding: 7px 13px;
+	border-radius: 3px;
+	text-transform: uppercase;
+}
+
+a:hover,a.active{
+	background: #f9f2ec;
+	opacity: 0.8;
+	transition: .5s;
+}
+.box1{
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+	font-family: sans-serif;
+	color: #4d3319;
+	text-align: center;	
+	width: 15%;
+    padding: 10px 0;    
+    border-radius: 5px; 
+   	border: none;
+   	background-color: rgba(0, 0, 0, 0.35); 
+    font-size: 20px;
+   	color: #fff;  
+} 
+.box2{
+    margin: 0;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+	font-family: sans-serif;
+	color: #4d3319;
+	text-align: center;	
+	width: 15%;
+    padding: 10px 0;    
+    border-radius: 5px; 
+   	border: none;
+   	background-color: rgba(0, 0, 0, 0.35); 
+    font-size: 20px;
+   	color: #fff; 
+
+} 
+Button{
+	margin: 0;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+	width: 10%;
+    padding: 10px 0;    
+    border-radius: 5px; 
+    border: none;
+    background-color: rgba(0, 0, 0, 0.35); 
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    position:absolute;    
+}
+Button:hover {
+     background-color: rgba(0, 0, 0, 0.7);
+} 
+

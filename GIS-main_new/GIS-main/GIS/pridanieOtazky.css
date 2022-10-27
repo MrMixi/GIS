@@ -1,0 +1,157 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+body{
+	background: url(lake.jpg);	
+}
+
+nav{
+	height: 80px;
+	width: 100%;
+}
+
+nav ul{
+	text-align: center;
+}
+
+nav ul li{
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
+}
+
+nav ul li a{
+	font-family: sans-serif;
+	color: #4d3319;
+	font-size: 17px;
+	padding: 7px 13px;
+	border-radius: 3px;
+	text-transform: uppercase;
+}
+
+a:hover, a.active{
+	background: #f9f2ec;
+	opacity: 0.8;
+	transition: .5s;
+}
+
+#questionTitleDiv{
+	font-size: 20px;
+	margin: 5px;
+	font-family: sans-serif;
+	color: #4d3319;
+	font-weight: bold;
+}
+
+#questionTitle{
+	width: 19.7%;
+    	padding: 10px 0;    
+    	border-radius: 5px; 
+   	border: none;
+   	background-color: rgba(0, 0, 0, 0.35); 
+    	font-size: 20px;
+   	color: #fff;    
+    	display: table-cell;
+    	vertical-align: middle;
+    	height: 40px;
+}
+
+#question1Div{
+	font-size: 20px;
+	margin: 5px;
+	font-family: sans-serif;
+	color: #4d3319;
+}
+
+#question1{
+	width: 20%;
+   	padding: 10px 0;    
+	border-radius: 5px; 
+    	border: none;
+    	background-color: rgba(0, 0, 0, 0.35); 
+    	font-size: 20px;
+    	color: #fff;    
+    	display: table-cell;
+    	vertical-align: middle;
+    	height: 40px;
+}
+
+#question2Div{
+	font-size: 20px;
+	margin: 5px;
+	font-family: sans-serif;
+	color: #4d3319;
+}
+
+#question2{
+	width: 20%;
+    padding: 10px 0;    
+    border-radius: 5px; 
+    border: none;
+    background-color: rgba(0, 0, 0, 0.35); 
+    font-size: 20px;
+    color: #fff;    
+    display: table-cell;
+    vertical-align: middle;
+    height: 40px;
+}
+
+#question3Div{
+	font-size: 20px;
+	margin: 5px;
+	font-family: sans-serif;
+	color: #4d3319;
+}
+
+#question3{
+	width: 20%;
+    padding: 10px 0;    
+    border-radius: 5px; 
+    border: none;
+    background-color: rgba(0, 0, 0, 0.35); 
+    font-size: 20px;
+    color: #fff;    
+    display: table-cell;
+    vertical-align: middle;
+    height: 40px;
+}
+/*
+label{
+	font-size: 25px;
+	margin: 5px;
+	font-family: sans-serif;
+	color: #4d3319;
+}
+input{
+	width: 20%; 
+    border-radius: 5px; 
+    border: none;
+    background-color: rgba(0, 0, 0, 0.35); 
+    font-size: 20px;
+    color: #fff;    
+   
+    vertical-align: middle;
+    height: 35px;
+
+}
+*/
+Button{
+	width: 10%;
+    padding: 10px 0;
+    margin: 10px auto;
+    border-radius: 5px; 
+    border: none;
+    background-color: rgba(0, 0, 0, 0.35); 
+    font-size: 14px;
+    font-weight: 600;
+    color: #4d3319;
+    position:absolute; 
+    margin: 5px;
+}
+Button:hover {
+      background-color: #f9f2ec;
+} 

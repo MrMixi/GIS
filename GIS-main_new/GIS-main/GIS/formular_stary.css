@@ -1,0 +1,136 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+nav{
+	height: 80px;
+	width: 100%;
+}
+nav ul{
+	text-align: center;
+}
+
+nav ul li{
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
+}
+
+nav ul li a{
+	font-family: sans-serif;
+	color: #4d3319;
+	font-size: 17px;
+	padding: 7px 13px;
+	border-radius: 3px;
+	text-transform: uppercase;
+}
+
+a:hover,a.active{
+	background: #f9f2ec;
+	opacity: 0.8;
+	transition: .5s;
+}
+body{
+	background: url(background.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	height: 100%;
+  	display: block;
+  	margin-left: 10px;
+  	margin-right: 10px; 
+  	color: #fff;	
+}
+
+.heading{
+	text-align: center;
+	width: 50%;
+	margin: auto;
+	margin-top: 20px;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 5px;
+ 	width: 20%;
+
+}
+
+#head{
+	font-size: 1.8em;
+}
+
+#subheading{
+	font-size: 18px;
+	margin-top: 10px;
+}
+
+#content1{
+	margin: auto;
+}
+#content2{
+	margin: auto;
+}
+form{
+	background-color: rgba(0, 0, 0, 0.7);
+	padding-top: 34px;
+	display: block;
+	align-items: center;
+	justify-content: center;
+	width: 54%;
+	border-radius: 5px;
+	margin: auto;
+	margin-top: 10px;
+	padding-bottom: 60px;
+
+}
+.box{
+	margin-left: 5px;
+	color: black;
+}
+
+button {
+      width: 25%;
+      padding: 10px 0;
+      margin: 10px auto;
+      border-radius: 5px; 
+      border: none;
+      background-color: rgba(0, 0, 0, 0.7); 
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      position:absolute; 
+      right:38%;
+}
+ button:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+} 
+label{
+	font-family: Arial, Helvetica, sans-serif;
+	margin-left: 5px
+}
+.plyn1{
+	width: 2%;
+	display: inline-block;     
+}
+
+.elektrina1{
+	width: 2%;      
+}
+
+.fotovoltaika1{
+	width: 2%;      
+}
+
+.solarnePanely1{
+	width: 2%;      
+}
+
+.spotrebaIntPriestor{
+	margin: 5px;
+     width: 5%;        
+}
+
+.typenergie1{
+	margin: 5px;
+     width: 10.8%;  
+}

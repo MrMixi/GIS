@@ -1,0 +1,29 @@
+<?php
+session_start();
+require 'connection.php';
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Admin prihlasenie</title>
+    <link rel="stylesheet" type="text/css" href="adminPrihlasenie.css">
+</head>
+<body>
+<nav>
+    <ul>
+    <li><a href="uvodnaStranka.html" class="hover">Domov</a></li>
+    <li><a href="kategoria.html" class="hover">Kategória</a></li>
+    <li><a href="pridanieOtazky.html" class="hover">Pridanie otázky</a></li>
+    <li><a href="formular_stary.html" class="hover">Vyplnenie formuláru</a></li>
+    <li><a href="adminPrihlasenie.html" class="active">Admin Prihlásenie</a></li>
+    </ul>
+</nav>
+<form action="prihlasovaciHandler.php" method="post">
+    <input  name="meno" placeholder="meno" class="box1"><br><br>
+    <input  type="password"  name="heslo" placeholder="heslo" class="box2"><br><br>
+    <button type="submit"  class="btn" name="prihlasovaciButton">Prihlásiť</button>
+</form>
+</body>
+</html>
